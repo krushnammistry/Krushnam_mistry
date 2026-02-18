@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krushnam Mistry | Aerospace Simulation Engineer</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family: Calibri, sans-serif;
+    background:#050816;
+    color:#e5e7eb;
+    overflow-x:hidden;
+}
+
+/* STARFIELD */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation:moveStars 200s linear infinite;
+    z-index:-2;
+}
+@keyframes moveStars{
+    from{background-position:0 0;}
+    to{background-position:-10000px 5000px;}
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(5,8,22,0.85);
+    backdrop-filter:blur(10px);
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #1f2937;
+    z-index:1000;
+}
+nav h2{color:#38bdf8}
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#e5e7eb;
+    font-size:15px
+}
+nav a:hover{color:#38bdf8}
+
+/* SECTIONS */
+section{padding:120px 8%}
+h1,h2,h3{font-weight:600}
+h2{margin-bottom:40px;color:#38bdf8}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.hero-text{max-width:600px}
+.hero h1{font-size:52px;color:white}
+.hero span{color:#38bdf8}
+.hero p{margin-top:20px;color:#9ca3af}
+.hero img{
+    width:280px;
+    border-radius:20px;
+    border:2px solid #38bdf8;
+    box-shadow:0 0 30px rgba(56,189,248,0.5);
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#38bdf8;
+    color:#050816;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn:hover{background:#0ea5e9}
+
+/* CARD */
+.card{
+    background:rgba(17,24,39,0.7);
+    backdrop-filter:blur(12px);
+    border:1px solid #1f2937;
+    padding:35px;
+    border-radius:16px;
+    margin-bottom:40px;
+    transition:0.4s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
+ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+li{
+    margin-bottom:8px;
+    color:#cbd5e1;
+}
+
+#three-container{
+    width:100%;
+    height:400px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #1f2937;
+    background:#050816;
+}
+
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center}
+.hero img{margin-top:30px}
+.hero h1{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<nav>
+<h2>Krushnam Mistry</h2>
+<div>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Aerospace <span>Simulation Engineer</span></h1>
+<p>M.Eng Aerospace Engineering | CFD | Nonlinear FEA | Explicit Dynamics Catia V5 | solidworks | Autocad | ANSYS-Fluent | LS-DYNA | Solidworks flow simulation | ANSYS Mechanical | ANSYS Fluent | ANSYS Workbench | SolidWorks Flow Simulation | LS-DYNA | MATLAB | Finite Element Analysis (FEA) | Computational Fluid Dynamics (CFD) | Nonlinear Analysis | Explicit Dynamics | Thermo-Structural Analysis | Mesh Generation | Post-Processing | Thermo-Structural Analysis</p>
+<a href="Krushnam Mistry.pdf" class="btn">Download Resume</a>
+</div>
+<img src="DSC_0214.jpg" alt="Krushnam Mistry">
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>CAE, CFD & Aerospace Engineering Projects</h2>
+
+<div class="card">
+<h3>Aerodynamic Performance Evaluation of NACA 4412 & NACA 23012 Airfoils</h3>
+<ul>
+<li>Performed steady-state RANS CFD simulations evaluating Cl, Cd and L/D ratio.</li>
+<li>Conducted structured meshing with boundary layer refinement.</li>
+<li>Executed mesh independence study ensuring numerical convergence.</li>
+<li>Analyzed pressure coefficient distribution and velocity contours.</li>
+<li>Validated results against aerodynamic reference datasets.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>CFD-Based Design Optimization of Featured Wing Flap System</h3>
+<ul>
+<li>Investigated flow separation and pressure gradients.</li>
+<li>Enhanced aerodynamic loading distribution.</li>
+<li>Improved lift-to-drag ratio through geometric refinement.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Structural Integrity & Failure Prevention Analysis of Aircraft Landing Gear</h3>
+<ul>
+<li>Performed nonlinear static FEA including contact and plasticity models.</li>
+<li>Executed LS-DYNA explicit impact simulations.</li>
+<li>Analyzed stress concentration, strain energy and deformation zones.</li>
+<li>Estimated safety factors and optimized structural integrity.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Thermo-Structural Simulation of High-Temperature Nozzle Assembly</h3>
+<ul>
+<li>Conducted coupled thermal-mechanical simulations.</li>
+<li>Modeled temperature-dependent material properties.</li>
+<li>Evaluated thermal expansion-induced stress gradients.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Delta Wing CFD Validation</h3>
+<ul>
+<li>3D modeling using CATIA V5 and geometry cleanup using SpaceClaim.</li>
+<li>CFD++ simulation validated against experimental data.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Design, Simulation & Analysis of a Space Robotic Manipulator (6DOF)</h3>
+<ul>
+<li>Developed forward and inverse kinematics models.</li>
+<li>Simulated trajectory planning in MATLAB & Simulink.</li>
+<li>Optimized control tuning for precision space applications.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Omnidirectional Robot's model design, obstacle avoidance and visual tracking</h3>
+<ul>
+<li>Implemented dynamic simulation model in MATLAB & Simulink.</li>
+<li>Designed obstacle avoidance and visual tracking algorithms.</li>
+<li>Optimized control system response for multi-directional mobility.</li>
+</ul>
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<div class="card">
+<h3>Freelance CAE Engineer (2024–Present)</h3>
+<ul>
+<li>Geometry cleanup, mesh generation and convergence validation.</li>
+<li>Performed nonlinear structural and CFD simulations and Prepared technical documentation and engineering reports.</li>
+<li>Defined material models, nonlinear contact interactions, boundary conditions, and load cases aligned with real operational environments.</li>
+<li>Executed CFD simulations for external aerodynamic flows, including lift, drag, pressure distribution, and flow separation analysis.</li>
+<li>Performed detailed post-processing of stress tensors, strain energy, deformation patterns, safety factors, and thermal gradients.</li>
+<li>Conducted mesh convergence studies and result validation to ensure numerical accuracy and model reliability.</li>
+<li>Developed high-quality structured and unstructured meshes, ensuring element quality metrics (skewness, aspect ratio, orthogonality) met convergence standards.</li>
+
+
+</ul>
+</div>
+
+<div class="card">
+<h3>Honda Engine Plant – Quality Control Associate</h3>
+<ul>
+<li>Ensuring equipment readiness and proficient in maintenance procedures with the tasks of tool change in horizontal cut milling machine and CNC machine.</li>
+<li>GD&T validation and ERP production documentation.</li>
+<li>Ensuring equipment readiness and proficient in maintenance procedures with the tasks of tool change in horizontal cut milling machine and CNC machine.</li>
+<li>Troubleshoot the mechanical issues of the conveyor belt, cameras on belt and assist TL in tool changing preventive maintanance.</li>
+<li>Assisted the quality team with on going project to improve front end fit and finish and conduct root cause analysis for mass production quality issues.</li>
+<li>Experience with CMM to measure the compliance of engine head and block of the Civic and CRV Gained Knowledge of GD&T in strictly quality oriented environment.</li>
+<li>Maintain detailed records quality checks in ERP system of production activities, including assembly procedures, test results, and quality checks and through inspections on engines parts like heads and blocks with the overall assembly.</li>
+
+
+</ul>
+</div>
+
+<div class="card">
+<h3>Simulation Lab Pvt Ltd – CAE Engineer</h3>
+<ul>
+<li>Structural lifespan FEA using CATIA and ANSYS.</li>
+<li>Thermo-structural research simulations.</li>
+<li>Product and process development support.</li>
+</ul>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>Email: krushnammistry@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/krushnam-mistry-990bb5185</p>
+<p>Upwork: upwork.com/freelancers/~016271824e695195ee</p>
+</div>
+</section>
+
+<footer>
+© 2026 Krushnam Mistry | Aerospace Simulation Portfolio
+</footer>
+
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/400, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({alpha:true});
+renderer.setSize(window.innerWidth,400);
+document.getElementById("three-container").appendChild(renderer.domElement);
+
+const geometry = new THREE.TorusKnotGeometry(1,0.3,100,16);
+const material = new THREE.MeshBasicMaterial({color:0x38bdf8, wireframe:true});
+const object = new THREE.Mesh(geometry, material);
+scene.add(object);
+camera.position.z = 4;
+
+function animate(){
+requestAnimationFrame(animate);
+object.rotation.x += 0.01;
+object.rotation.y += 0.01;
+renderer.render(scene,camera);
+}
+animate();
+</script>
+
+</body>
+</html>
+
+
+
