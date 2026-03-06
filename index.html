@@ -326,12 +326,32 @@ requestAnimationFrame(animate);
 object.rotation.x += 0.01;
 object.rotation.y += 0.01;
 renderer.render(scene,camera);
+    function changeSlide(button, direction){
+
+const slider = button.parentElement;
+const images = slider.querySelectorAll("img");
+
+let index = 0;
+
+images.forEach((img,i)=>{
+if(img.classList.contains("active")){
+index=i;
+img.classList.remove("active");
+}
+});
+
+index = (index + direction + images.length) % images.length;
+
+images[index].classList.add("active");
+
+}
 }
 animate();
 </script>
 
 </body>
 </html>
+
 
 
 
