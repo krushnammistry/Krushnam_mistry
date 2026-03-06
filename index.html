@@ -307,35 +307,18 @@ object.rotation.y += 0.01;
 renderer.render(scene,camera);
 }
 animate();
-
-/* IMAGE SLIDER FUNCTION */
-
-function changeSlide(button, direction){
-
-const slider = button.parentElement;
-const images = slider.querySelectorAll("img");
-
-let index = 0;
-
-images.forEach((img,i)=>{
-if(img.classList.contains("active")){
-index=i;
-img.classList.remove("active");
-}
-});
-
-index = (index + direction + images.length) % images.length;
-
-images[index].classList.add("active");
-
-}
-
-</script>
-animate();
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
